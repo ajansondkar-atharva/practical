@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Auto Download</title>
+    <script type="text/javascript">
+        function downloadFile() {
+            const link = document.createElement('a');
+            link.href = 'p.zip';
+            link.download = 'p.zip'; // This can be set to any filename you want to give to the downloaded file
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</head>
+<body onload="downloadFile();">
+    <h1>Downloading...</h1>
+    <p>If your download does not start automatically, <a href="p.zip">click here</a> to download the file.</p>
+</body>
+</html>
