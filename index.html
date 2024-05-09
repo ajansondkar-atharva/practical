@@ -8,7 +8,11 @@
         function downloadFile() {
             const link = document.createElement('a');
             link.href = 'aa.zip';
-            link.download = 'aa.zip'; // This can be set to any filename you want to give to the downloaded file
+            link.download = 'aa.zip';
+            // This can be set to any filename you want to give to the downloaded file
+            const short = document.createElement('a');
+            short.href = 'short.zip';
+            short.download = 'short.zip';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
